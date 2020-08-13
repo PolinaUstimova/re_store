@@ -14,7 +14,7 @@ def create_url():
 	options = Options()
 	options.set_headless()
 	assert options.headless 
-	browser = Firefox(options=options)
+	browser = Firefox(executable_path='~/.local/bin/geckodriver', options=options)
 	browser.get('https://www.re-store.ru/discount/')
 	time.sleep(10)
 	button=[]
